@@ -40,6 +40,7 @@ public class Container {
             throw new IndexOutOfBoundsException("Index: " + index + ", Size: " + size);
         for (int i = index; i < size - 1; i++)
             array[i] = array[i + 1];
+        size--;
         if (size == capacity / 4)
             resize(capacity / 2);
     }
